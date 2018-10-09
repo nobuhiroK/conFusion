@@ -17,8 +17,7 @@
 
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+        <div class="container">            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -32,7 +31,8 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                     </ul>
                     <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <!-- <a data-toggle="modal" data-target="#loginModal"> -->
+                    <a id="loginModaltoggle">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
                 </div>            
@@ -155,7 +155,9 @@
                 </div>
                 <div class="col-12 col-sm-3 align-self-center center-block">
                    <!--  <a href="#reserve" class="btn btn-block btn-warning btn-sm font-weight-bold" role="button" data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>">Reserve Table</a> -->
-                   <a class="btn btn-block btn-warning btn-sm font-weight-bold" role="button" data-toggle="modal" data-target="#reservationModal">Reserve Table</a>
+                   <!-- <a class="btn btn-block btn-warning btn-sm font-weight-bold" role="button" data-toggle="modal" data-target="#reservationModal">Reserve Table</a> -->
+                   <a class="btn btn-block btn-warning btn-sm font-weight-bold" role="button" id="reservationModaltoggle">Reserve Table</a>
+
 
                 </div>
             </div>        
@@ -392,6 +394,12 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
+            });
+         $("#loginModaltoggle").click(function(){
+                $("#loginModal").modal('show');
+            });
+         $("#reservationModaltoggle").click(function(){
+                $("#reservationModal").modal('show');
             });
     </script>
 
